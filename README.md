@@ -220,7 +220,7 @@ issues.
 1. Despite limited training epochs, showcased potential in predicting a significant portion of the captcha.
 
 ## Conclusion and Future Directions
-###Preferred Approach
+### Preferred Approach
 #### Approach 1:
 1. Emerges as the more robust and accurate solution.
 2. Demonstrated superior accuracy and adaptability.
