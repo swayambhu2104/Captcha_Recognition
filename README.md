@@ -16,7 +16,7 @@ grayscale.
 OCR model.
 
 ### Model Architecture
-The OCR model architecture is a crucial component of the approach. The model is structured as an encoder-decoder, incorporating convolutional layers for image feature extraction, dense layers for mapping, and bidirectional LSTM layers for sequence modeling. The CTC loss
+The OCR model architecture is a crucial component of the approach. The model is structured as an encoder-decoder, incorporating convolutional layers for image feature extraction, dense layers for mapping, and bidirectional LSTM layers for sequence modeling. The CTC loss
 layer is added to facilitate effective training.
 #### 2.1 Convolutional Blocks:
 1. Initial block: 32 filters, 3x3 kernel, ReLU activation, and max-pooling.
@@ -34,7 +34,7 @@ Custom layer (‘CTCLayer‘) integrated to compute the Connectionist Temporal C
 
 ### Training Strategy
 #### 3.1 Epochs and Early Stopping:
-Model trained for 100 epochs. Early stopping implemented to prevent overfitting.
+Model trained for 100 epochs. Early stopping implemented to prevent overfitting.
 #### 3.2 Optimizer:
 Adam optimizer chosen for its efficiency in training neural networks.
 ### Model Evaluation
@@ -90,13 +90,13 @@ variations.
 ## Approach 3: Convolutional Neural Network (CNN) for CAPTCHA Letter Recognition
 ### 1. Introduction
 The primary goal of Approach 3 is to create a robust solution for recognizing
-individual letters within CAPTCHA images using Convolutional Neural Networks (CNN). CAPTCHAs, commonly employed for user verification on websites, present a challenge due to the presence of noise, such as blurring and lines,
-making traditional image recognition approaches less effective. This report outlines the key steps and methodologies employed in building and training a CNN
+individual letters within CAPTCHA images using Convolutional Neural Networks (CNN). CAPTCHAs, commonly employed for user verification on websites, present a challenge due to the presence of noise, such as blurring and lines,
+making traditional image recognition approaches less effective. This report outlines the key steps and methodologies employed in building and training a CNN
 model for letter recognition.
 ### 2. Image Processing
 #### 2.1 Overview
 The initial step involves preprocessing the CAPTCHA images to enhance their
-suitability for CNN-based recognition. Image processing techniques are employed to handle noise, adaptively threshold the images, and partition them
+suitability for CNN-based recognition. Image processing techniques are employed to handle noise, adaptively threshold the images, and partition them
 into distinct regions corresponding to individual letters.
 #### 2.2 Adaptive Thresholding
 The application of adaptive thresholding, using the Gaussian method, is crucial
@@ -120,12 +120,12 @@ preparing distinct inputs for the subsequent CNN model.
 Normalization is performed to scale pixel values between 0 and 1, creating a
 standardized input for the CNN.
 #### 3.2 Label Distribution Analysis
-An analysis of label distribution reveals insights into the dataset. This understanding aids in addressing potential biases and optimizing the model’s performance.
+An analysis of label distribution reveals insights into the dataset. This understanding aids in addressing potential biases and optimizing the model’s performance.
 #### 3.3 One-Hot Encoding
 Labels are one-hot encoded to represent categorical information, allowing for
 effective training of the CNN.
 #### 3.4 Train-Test Split
-The dataset is divided into training and testing sets to facilitate model evaluation. This ensures the model’s ability to generalize to unseen data.
+The dataset is divided into training and testing sets to facilitate model evaluation. This ensures the model’s ability to generalize to unseen data.
 ### 4. Model Creation
 A CNN model is designed, consisting of convolutional and dense layers. This
 architecture is tailored to capture hierarchical features within the images, crucial
@@ -149,13 +149,13 @@ Graphical representations of loss and accuracy throughout the training process
 offer insights into the model’s convergence and overall performance.
 
 #### 7.2 Model Prediction and Evaluation
-The trained model is evaluated on the test set, and accuracy metrics are calculated. Classification reports provide a detailed breakdown of performance across
+The trained model is evaluated on the test set, and accuracy metrics are calculated. Classification reports provide a detailed breakdown of performance across
 different letters
 
 ## Approach 4: Enhanced CRNN Model for CAPTCHA Letter Recognition
 ### 1. Introduction
-The primary goal of Approach 4 is to refine the CRNN (Convolutional Recurrent Neural Network) model for effective CAPTCHA letter recognition. This
-approach incorporates improvements in the model architecture and training process to enhance overall performance. While the accuracy may not be perfect,
+The primary goal of Approach 4 is to refine the CRNN (Convolutional Recurrent Neural Network) model for effective CAPTCHA letter recognition. This
+approach incorporates improvements in the model architecture and training process to enhance overall performance. While the accuracy may not be perfect,
 it demonstrates significant progress in predicting a substantial portion of the
 captcha, making it a valuable addition to the evaluation process.
 ### 2. Model Enhancements
@@ -177,33 +177,33 @@ The model was trained on a dataset with a varied representation of CAPTCHA
 images. The training process included monitoring training and validation losses
 for effective model convergence.
 ### 4. Evaluation Results
-Approach 4 demonstrated notable progress in predicting CAPTCHA letters accurately. While the exact accuracy might not be optimal, the model consistently
+Approach 4 demonstrated notable progress in predicting CAPTCHA letters accurately. While the exact accuracy might not be optimal, the model consistently
 predicts a significant portion of the captcha, showcasing its potential for further
-improvement. It achieved an accuracy of 47.78% on training dataset and an
-accuracy of 47.37% on test dataset and 77.73% on validation dataset. All the
+improvement. It achieved an accuracy of **47.78%** on training dataset and an
+accuracy of **47.37%** on test dataset and **77.73%** on validation dataset. All the
 captcha letters were converted into small letters and then calculated.
 ### 5. Sample Predictions
 A sample of 10 predictions from Approach 4 illustrates the model’s ability to
 approximate CAPTCHA solutions. Despite the occasional deviation from the
-actual captcha, the predictions exhibit promising outcomes, especially considering the limited training duration.
+actual captcha, the predictions exhibit promising outcomes, especially considering the limited training duration.
 ### 6. Comparative Analysis
 Approach 4 provides an alternative perspective on CAPTCHA recognition,
 achieving commendable results in predicting a substantial portion of the captcha.
-While the exact accuracy might fall short, the model’s ability to smoothly predict 3/4 letters marks a significant advancement.
+While the exact accuracy might fall short, the model’s ability to smoothly **predict 3/4** letters marks a significant advancement.
 ### 7. Conclusion and Future Directions
-Approach 4 contributes valuable insights into enhancing CAPTCHA recognition models. While further training and optimization are recommended, the
+Approach 4 contributes valuable insights into enhancing CAPTCHA recognition models. While further training and optimization are recommended, the
 progress achieved in predicting a significant portion of the captcha positions
 this approach as a promising candidate for future iterations.
 ### 8. Recommendations
-• 1. Extend Training: Consider training Approach 4 for an increased number of epochs to allow the model to further learn intricate patterns.
-• 2. Fine-Tuning: Experiment with hyperparameter tuning and model architecture adjustments to enhance accuracy.
-• 3. Iterative Development: Emphasize continuous refinement and exploration of advanced techniques to address real-world challenges.
+• 1. Extend Training: Consider training Approach 4 for an increased number of epochs to allow the model to further learn intricate patterns.
+• 2. Fine-Tuning: Experiment with hyperparameter tuning and model architecture adjustments to enhance accuracy.
+• 3. Iterative Development: Emphasize continuous refinement and exploration of advanced techniques to address real-world challenges.
 
 ## Comparative Analysis and Insights
 ### Accuracy Comparison
 #### Approach 1: Exhibited superior accuracy on the test dataset.
 #### Approach 2: Limited success with significantly lower accuracy compared to Approach 1.
-#### Approach 3: Faced challenges with poor image quality, resulting in bad accuracy.
+#### Approach 3: Faced challenges with poor image quality, resulting in bad accuracy.
 #### Approach 4: Demonstrated progress in predicting a substantial portion of the captcha, especially considering its brief training duration.
 
 ### Scalability and Robustness
@@ -217,7 +217,7 @@ this approach as a promising candidate for future iterations.
 1. Encountered difficulties in scalability and robustness due to image quality
 issues.
 #### Approach 4:
-1. Despite limited training epochs, showcased potential in predicting a significant portion of the captcha.
+1. Despite limited training epochs, showcased potential in predicting a significant portion of the captcha.
 
 ## Conclusion and Future Directions
 ### Preferred Approach
